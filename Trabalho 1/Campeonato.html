@@ -1,0 +1,53 @@
+<meta charset = "utf-8">
+
+<script>
+    
+    var i, j, idade, peso, altura, qtde18 = 0, somaIdade, mediaIdade,somaAltura = 0, mediaAltura, qtde80 =0 ,percentual80;
+    
+    for(i = 1; i <= 5; i++){
+        
+        alert("Informando os dados do time " + i);
+        
+        //precisa zerar novamente para valores de um novo time
+        somaIdade = 0;
+        
+        for(j = 1; j <= 11 ; j++){
+            alert("Informando dados do jogador " +j+ " do time " +i);
+        
+            idade = parseInt(prompt("Idade jogador " +j));
+            
+            if(idade < 18){
+                qtde18++;
+            }
+            
+            somaIdade = somaIdade + idade;
+            
+            altura = parseFloat(prompt("Altura jogador " +j));
+            
+            somaAltura = somaAltura + altura;
+            
+            peso = parseFloat(prompt("Peso do jogador " +j));
+            
+            if(peso > 80){
+                qtde80++;                
+            }
+            
+        }
+        
+        mediaIdade = (somaIdade / 11);
+           
+        document.write("<br> Informações do Time " +i+ "<br>");
+        document.write("A média de idades do time " +i+ " é: ",mediaIdade.toFixed(2), "<br>");
+        
+    }
+    
+    percentual80 = (qtde80 / 55) * 100;
+    mediaAltura = somaAltura / 55;
+    
+    document.write("<br> Informações Gerais <br>");
+    document.write("Jogadores com idade inferior a 18 anos: ",qtde18,"<br>");
+    document.write("A média de altura do campeonato é de: ", mediaAltura.toFixed(2),"<br>");
+    document.write("O percentual de jogadores com mais de 80kg do campeonato é: ",percentual80.toFixed(2),"% <br>");
+    
+
+</script>

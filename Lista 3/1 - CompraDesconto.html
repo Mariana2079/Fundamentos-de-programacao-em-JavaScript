@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+    
+    var compra, desconto,valorFinal;
+    
+    compra = parseFloat(prompt("Valor da compra: "));
+    
+    if(compra >= 5000){
+        valorFinal = compra - (compra * 0.20);
+    }else{
+        valorFinal = compra - (compra * 0.15);
+    }
+    
+    desconto = compra - valorFinal;
+    
+    
+    document.write("------Relatório------<br>");
+    document.write("Valor da compra: ",compra.toFixed(2),'<br>');
+    document.write("Valor do desconto: ",desconto.toFixed(2),'<br>');
+    document.write("Valor a ser pago: ",valorFinal.toFixed(2),'<br>');
+    
+   
+    
+
+
+</script>

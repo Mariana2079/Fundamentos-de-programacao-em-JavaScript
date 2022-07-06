@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script>
+    
+    var lucro,nomeProduto,custo, preco,qtdeVendida;
+    
+    nomeProduto = String(prompt("Nome do produto: "));
+    custo = Number(prompt("Preço de custo: "));
+    preco = Number(prompt("Preço de venda: "));
+    qtdeVendida = Number(prompt("Quantidade de produtos vendida: "));
+    
+    lucro = (preco * qtdeVendida) - (custo * qtdeVendida);
+    
+    document.write("------Relatório------<br>");
+    document.write("Nome do produto:",nomeProduto.toString,'<br>');
+    document.write("Preço de custo: ",custo.toFixed(2),'<br>');
+    document.write("Preço de venda: ",preco.toFixed(2),'<br>');
+    document.write("Quantidade de produtos vendida: ",qtdeVendida,'<br>');
+    document.write("Lucro em reais pelas vendas: ",lucro.toFixed(2));
+    
+    
+
+
+</script>

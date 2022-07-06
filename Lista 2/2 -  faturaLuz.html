@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+
+<script>
+    
+    var consumo, fatura, taxaI, taxaM = 1.70;
+    
+    consumo = Number(prompt('Informe a quantidade de KWATs consumidos: '));
+    
+    taxaI = (consumo * 0.41) * 0.03;
+    
+    fatura = (consumo * 0.41) + taxaI + taxaM;
+    
+    document.write('-----Relatório-----<br>');
+    document.write('Taxa de iluminação:  ',taxaI.toFixed(2),'<br>');
+    document.write('O valor da fatura é: ',fatura.toFixed(2),'<br>');
+    
+</script>

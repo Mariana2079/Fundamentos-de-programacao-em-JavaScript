@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script>
+    
+    var num,i=1,aux,maior,menor,soma=0,media,diferenca,produto,divisao;
+    
+    while(i <= 10){
+        num = Number(prompt("Informe o " + i +"o número: "));
+       
+        if(i == 1){
+            maior = num;
+            menor = num;  
+        }else if(num > maior){
+            maior = num;
+        }else if(num < menor){
+            menor = num;
+        }
+        
+        soma = soma + num;
+        
+        i++;  
+    }
+    
+    media = soma / 10;
+    
+    diferenca = maior - menor;
+    
+    produto = maior * menor;
+    
+    divisao = maior / menor;    
+
+    document.write("<br> Relatorio <br>");
+    document.write("A soma dos valores digitados: " +soma+ "<br>");
+    document.write("A média aritmética dos valores digitados: ",media.toFixed(2),"<br>");
+    document.write("A diferença entre maior e o menor número: " +diferenca+ "<br>");
+    document.write("O produto entre o maior e o menor número: " +produto+ "<br>");
+    document.write("A divisão do maior pelo menor número: ",divisao.toFixed(2), "<br>");
+    
+</script>

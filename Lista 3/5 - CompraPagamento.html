@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+    
+    var compra,formaPagamento;
+    
+    compra = Number(prompt("Informe o valor da compra: "));
+    formaPagamento = prompt("Informe a forma de pagamento (c: cartao ou d: dinheiro/cheque) ");
+
+    if(formaPagamento == 'd'){
+        document.write("O valor a ser pago é de: ",compra.toFixed(2));
+    }else if(formaPagamento == 'c'){
+        document.write('O valor a ser pago é de: ',((compra * 0.025) + compra).toFixed(2));
+    }
+    else{
+        document.write("Forma de pagamento inválida! ");
+    }
+    
+</script>

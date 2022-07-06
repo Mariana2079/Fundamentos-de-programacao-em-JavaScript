@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+
+<script>
+    var salBase, reajuste, salReajuste;
+    
+    salBase = parseFloat(prompt('Informe o salário atual: '));
+    
+    reajuste = salBase * 0.128;
+    salReajuste = salBase + reajuste;
+    
+    document.write('----Relatório ---- <br>');
+    document.write('Salario Base: ',salBase.toFixed(2),'<br>');
+    document.write('Reajuste: ',reajuste.toFixed(2),'<br>');
+    document.write('Salario Reajustado: ',salReajuste.toFixed(2),'<br>');
+    
+</script>

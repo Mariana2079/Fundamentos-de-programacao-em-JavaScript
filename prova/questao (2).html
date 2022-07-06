@@ -1,0 +1,88 @@
+<meta charset="UTF-8">
+<script>
+    var nome=[], precoCompra=[],precoVenda=[],lucro=[],lucro1=0,lucro2=0,lucro3=0,maior,menor,nome1,precoCompra1,precoVenda1,lucroMa,nome2,precoCompra2,precoVenda2,lucroMe;
+    
+    for(i = 1; i <= 10; i++){
+        nome[i] = prompt("Nome do produto: ");
+        precoCompra[i] = parseFloat(prompt("Preço de compra: "));
+        precoVenda[i] = parseFloat(prompt("Preço de venda: "));
+       
+        lucro[i] = precoVenda[i] - precoCompra[i];
+        
+        if(lucro[i] < 10.00){
+            lucro1++;
+            if(i == 1){
+                menor = lucro[i];
+                nome1 = nome[i];
+                precoCompra1 = precoCompra[i];
+                precoVenda1 = precoVenda[i];
+                lucroMe = lucro[i];
+            }else if(lucro[i] < menor){
+                menor = lucro[i];
+                nome1 = nome[i];
+                precoCompra1 = precoCompra[i];
+                precoVenda1 = precoVenda[i];
+                lucroMe = lucro[i];
+            }
+        }
+        
+        else if(lucro[i] >= 10.00 && lucro[i] <= 20.00){
+            lucro2++;
+        }
+        
+        else if(lucro[i] > 20){
+            lucro3++;
+            if(i == 1){
+                maior = lucro[i];
+                nome2 = nome[i];
+                precoCompra2 = precoCompra[i];
+                precoVenda2 = precoVenda[i];
+                lucroMa = lucro[i];
+            }else if(lucro[i] > maior){
+                maior = lucro[i];
+                nome2 = nome[i];
+                precoCompra2 = precoCompra[i];
+                precoVenda2 = precoVenda[i];
+                lucroMa = lucro[i];
+            }
+            
+        }
+    }
+    
+    //
+    
+    document.write('<br> Relatório <br>');
+    for(i = 1; i <= 10; i++){
+        document.write("Nome do produto " +i+ ":  " +nome[i]+ "<br>");
+        document.write("Preço de compra do produto " +i+ ":  " +precoCompra[i]+ "<br>");
+        document.write("Preço de venda do produto " +i+ ":  " +precoVenda[i]+ "<br>");
+        document.write("Lucro do produto" +i+ ":  " +lucro[i]+ "<br><br>");
+        
+    }
+    
+    //
+    
+    document.write("<br> Listagem contendo quantos produtos retornaram: <br>");
+    document.write("Lucro < 10,00: " +lucro1+ " <br>");
+    document.write("Lucro >= 10,00 e lucro <= 20,00: " +lucro2+ " <br>");
+    document.write("Lucro > 20,00: " +lucro3+ " <br>");
+    
+    //
+    
+    document.write("<br> Produto que retornou o maior lucro: <br>");
+    document.write("Nome do produto: " +nome2+ "<br>");
+    document.write("Preço de compra do produto: " +precoCompra2+ "<br>");
+    document.write("Preço de venda do produto: " +precoVenda2+ "<br>");
+    document.write("Lucro do produto: " +lucroMa+ "<br><br>");
+    
+    
+    //
+  
+    document.write("<br> Produto que retornou o menor lucro: <br>");
+    document.write("Nome do produto: " +nome1+ "<br>");
+    document.write("Preço de compra do produto: " +precoCompra1+ "<br>");
+    document.write("Preço de venda do produto: " +precoVenda1+ "<br>");
+    document.write("Lucro do produto: " +lucroMe+ "<br><br>");
+    
+    
+</script>

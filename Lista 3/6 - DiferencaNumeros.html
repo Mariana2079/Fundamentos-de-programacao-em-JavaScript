@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+    
+    var num1,num2,diferenca;
+    
+    alert ("Informe dois numeros inteiros.O segundo deve ser menor que o primeiro - CHANCE 1");
+    num1 = parseInt(prompt("Número 1: "));
+    num2 = parseInt(prompt("Número 2: "));
+    
+    
+    if(num1 > num2){
+        diferenca = num1 - num2;
+        document.write("num1 = ",num1,'<br>');
+        document.write("num2 = ",num2,'<br>');
+        document.write("A diferenca é de: ", diferenca);
+    }else{
+        alert ("O segundo deve ser menor que o primeiro - CHANCE 2");
+        num1 = parseInt(prompt("Número 1: "));
+        num2 = parseInt(prompt("Número 2: "));
+    
+            if(num1 > num2){
+                diferenca = num1 - num2;
+                document.write("num1 = ",num1,'<br>');
+                document.write("num2 = ",num2,'<br>');
+                document.write("A diferenca é de: ", diferenca);
+            }else{
+                document.write("Erro novamente. Suas chances acabaram!");
+            }
+        
+    }
+
+</script>

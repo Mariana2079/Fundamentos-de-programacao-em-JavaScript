@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script>
+    
+    var num1,num2,op;
+    
+    num1 = Number(prompt("Numero 1: "));
+    num2 = Number(prompt("Numero 2: "));
+    op = parseInt(prompt("Digite a operação desejada: (1 - Média, 2 - Diferença, maior pelo menor), 3 - Produto, 4-Divisão, primeiro pelo segundo"));
+    
+    switch(op){
+        case 1:
+            document.write("Média: ",(num1 / num2) / 2);
+            break;
+        case 2:
+            if(num1 >= num2){
+                document.write("Diferença, maior pelo menor: ", num1 - num2);     
+            }else{
+                document.write("Diferença, maior pelo menor  ", num2 - num1);
+            }
+            break;
+        case 3: 
+            document.write("Produto: ",num1 * num2);
+            break;
+        case 4: 
+            document.write("Divisao: ",num1 / num2);
+            break;        
+        default:
+            document.write("Valor invalido");
+    }
+
+</script>

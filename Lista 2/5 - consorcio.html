@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+    
+    var totalPrestacoes,prestacoesPagas,totalPago,valorPrestacao,saldoDevedor;
+    
+    totalPrestacoes = Number(prompt("Número total de prestações: "));
+    prestacoesPagas = Number(prompt("Número de prestações pagas: "));
+    valorPrestacao = Number(prompt("Valor de cada prestação: "));
+    
+    totalPago = (prestacoesPagas * valorPrestacao);
+    saldoDevedor = (totalPrestacoes * valorPrestacao) - totalPago;
+    
+    document.write("------Relatório------<br>");
+    document.write("Número de prestações:",totalPrestacoes,'<br>');
+    document.write("Valor de cada prestação: ",valorPrestacao.toFixed(2),'<br>');
+    document.write("Número de prestações pagas: ",prestacoesPagas,'<br>');
+    document.write("Valor total pago: ",totalPago.toFixed(2),'<br>');
+    document.write("Saldo devedor: ",saldoDevedor.toFixed(2));
+    
+</script>
+    

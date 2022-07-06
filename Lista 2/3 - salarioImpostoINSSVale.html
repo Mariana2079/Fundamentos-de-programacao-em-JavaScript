@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+
+<script>
+    var salarioBruto, salarioLiquido, inss, IR, vale;
+    
+    salarioBruto = parseFloat(prompt('Informe o salário bruto: '));
+    
+    inss = salarioBruto * 0.05;
+    IR = salarioBruto * 0.07;
+    vale = salarioBruto * 0.08;
+    
+    salarioLiquido = salarioBruto - inss - IR - vale;
+    
+    document.write('----Relatório ---- <br>');
+    document.write('Salario Bruto: ',salarioBruto.toFixed(2),'<br>');
+    document.write('INSS: ',inss.toFixed(2),'<br>');
+    document.write('IR: ',IR.toFixed(2),'<br>');
+    document.write('Vale alimentação: ',vale.toFixed(2),'<br>');
+    document.write('Salario liquido: ',salarioLiquido.toFixed(2));
+    
+</script>
